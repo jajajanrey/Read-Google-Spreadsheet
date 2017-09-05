@@ -30,7 +30,8 @@ def main(sheet_id, range_notation_list, service_account_json):
 
     if range_notation_list:
         range_notation_list = json.loads(range_notation_list)
-
+    else:
+        range_notation_list = ["A:B"]
 
     service = build('sheets', 'v4', credentials=credentials)
     result = None
