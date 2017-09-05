@@ -43,14 +43,3 @@ def main(sheet_id, range_notation_list, service_account_json):
 
     os.remove(CREDENTIALS_PATH)
     return result
-
-
-sheet_id = "15dORu08bughlpoMAiLclvwPwwpZYitTS7LCK65fSoVA"
-range_notation_list = json.dumps(["A:B"])
-
-service_account_json = ""
-with open("symphcraft_service_account.json") as f:
-    service_account_json = f.read()
-
-
-print main(sheet_id, range_notation_list, service_account_json)
